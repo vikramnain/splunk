@@ -1,0 +1,13 @@
+Place your TA in /opt/splunk/etc/master-apps/
+
+
+change persission of the TA if needed
+chown -R  splunk:splunk TA-check-point-app-for-splunk
+
+change directory to /opt/splunk/bin/
+
+change to splunk user
+sudo su - splunk
+
+apply cluster bundle
+./splunk apply cluster-bundle
