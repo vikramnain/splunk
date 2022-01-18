@@ -1,0 +1,7 @@
+index existing?
+
+| rest /services/data/indexes | stats count(eval(title=="yourindex")) as exists
+
+list of index 
+
+| eventcount summarize=false index=* index=_* | dedup index | fields index
