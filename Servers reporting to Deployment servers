@@ -1,0 +1,12 @@
+Login to Deployment server GUI
+open search app and run following commands
+
+Windows server reporting to Deployment server
+| rest splunk_server=local /services/deployment/server/clients | search utsname="windows-x64" | table hostname
+
+
+Linux server reporting to DS
+| rest splunk_server=local /services/deployment/server/clients | search utsname="linux-*"| table hostname
+
+All servers reporting to DS
+| rest splunk_server=local /services/deployment/server/clients | table hostname ip
