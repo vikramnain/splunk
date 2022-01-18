@@ -3,5 +3,6 @@ Make sure splunk has access to your TA. Check permissions.
 You can change by chown -R  splunk:splunk TA-app-for-splunk
 If you logged in as root change it to splunk user
 sudo su - splunk 
+change directory to /opt/splunk/bin
 apply sh cluster with following command
 ./splunk apply shcluster-bundle -target https://<SH IP>:8089 -preserve-lookups true
