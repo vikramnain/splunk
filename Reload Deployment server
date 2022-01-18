@@ -1,0 +1,6 @@
+Login as splunk user 
+sudo su - splunk
+
+change directory to /opt/splunk/bin/
+reload deployment conf
+./splunk reload deploy-server
