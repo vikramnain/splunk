@@ -1,0 +1,11 @@
+Make sure connectivity is there . Run telnet <deploymentserver_ip> 8089
+Make sure you have configured deploymentclient.conf. (path /opt/splunkUniversalForwarder/etc/system/local for linux /Progam Files/splunk/etc/system/local for windows). Write stanza in following format
+[target-broker:deploymentServer]
+targetUri= <Deployment server IP>:8089
+If still not reporting make sure you have same version on splunk client and deployment server.
+If Splunk client is showing phonning home but not showing in Deployment server.Try to reconfigure your splunk client basic properties i.e. GUID. we can check in splunkd.log in deployment server if it is showing old properties. Then reset guid.
+./splunk stop
+./splunk clone-prep-clear-config
+./splunk start
+
+If still not working try to reinstall.
